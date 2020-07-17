@@ -1,0 +1,17 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+functions:
+  create-deployment:
+    lang: go
+    build_args:
+      GO111MODULE: on
+      CGO_ENABLED: 0
+    handler: ./
+    image: pableee/create-service:0.1
+    environment:
+      write_debug: true
+    secrets:
+      - kubeconfig
+
