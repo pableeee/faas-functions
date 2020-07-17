@@ -9,7 +9,7 @@ functions:
       GO111MODULE: on
       CGO_ENABLED: 0
     handler: ./
-    image: pableee/create-service:0.1
+    image: pableee/delete-service:0.1
     environment:
       write_debug: true
     secrets:
